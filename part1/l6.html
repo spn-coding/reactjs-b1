@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multi Sub Elements</title>
+</head>
+
+<body>
+
+    <div id="root">
+
+    </div>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script type="text/javascript">
+
+        const header = React.createElement(
+            'h3',
+            { id: 'card-title', className: 'card-title' },
+            "ReactJs class"
+        );
+
+        const caption = React.createElement(
+            'p',
+            null,
+            "Welcome to reactjs framework"
+        );
+
+        const box = React.createElement(
+            'div',
+            { className: 'boxes' },
+            header, caption
+        );
+
+        const container = React.createElement(
+            'div',
+            { className: 'container' },
+            box
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(container);
+
+    </script>
+</body>
+
+</html>
