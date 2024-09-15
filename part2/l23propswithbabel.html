@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Working with Babel - Props</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // const Greeting = (props) =>
+        // {
+        //     return (
+        //         <div>
+        //             <p>{props.caption}</p>
+        //         </div>
+        //     )
+        // }
+
+        const Greeting = (item) => <h1>{item.caption}</h1>;
+
+        const Content = ({ post }) => <p> {post} </p>;
+
+        const Bye = ({ caption, design }) =>
+        {
+            return (
+                <React.Fragment>
+                    <i>{caption}</i>
+                    <i>Design By {design}</i>
+                </React.Fragment>
+            )
+        }
+
+        const Appreciate = ({ caption }) => (
+            <div>
+                <p>{caption}</p>
+                <Bye caption="Bye Bye" design="Data Land Technology" />
+            </div>
+        );
+
+        const container = (
+            <div>
+                <Greeting caption="Welcome to Reactjs Class." />
+                <Content post="This is post one" />
+                <Content post="This is post two" />
+                <Content post="This is post therr" />
+                <Appreciate caption="Thank you for intresting Reactjs." />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(container);
+
+    </script>
+</body>
+
+</html>

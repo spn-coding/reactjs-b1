@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Working with Babel - Props</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const saybye = "Bye Bye";
+
+        const Title = props => <h1>Welcome to our {props.text} lesson.</h1>;
+        const Caption = props => <p>{props.text}</p>
+
+        // const Appreciate = props => <small>{props.text}</small>;
+        const Appreciate = ({ text }) => <small>{text}</small>;
+
+        // const Copyright = props => <p>Copyright {props.year}. All right reserved. Design by {props.company}</p>;
+        const Copyright = ({ year, company }) => <p>Copyright {year}. All right reserved. Design by {company}</p>;
+
+        const container = (
+            <div>
+                <Title text="Reactjs Framework" />
+                <Caption text="Thanks for intresting our framework." />
+                <Appreciate text={saybye} />
+                <Copyright year="2024" company="DLT" />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(container);
+
+    </script>
+</body>
+
+</html>
