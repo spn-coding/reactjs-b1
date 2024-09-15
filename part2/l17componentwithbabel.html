@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Working with Babel - Component</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function Myfunone()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - One</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        function Myfuntwo()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - Two</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        function Myfunthree()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - Three</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        function Myfunfour()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - Four</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        function Myfunfive()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - Five</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        function Myfunsix()
+        {
+            return (
+                <div>
+                    <h1>Hello Guy! I am Component - Six</h1>
+                    <p>Are you ready to use component ?</p>
+                </div>
+            )
+        }
+
+        const container = (
+            <div>
+                <Myfunone />
+                <Myfuntwo />
+                <Myfunthree />
+                <Myfunfour />
+                <Myfunfive />
+                <Myfunsix />
+            </div>
+        );
+
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+            // container
+
+            // <Myfunone></Myfunone>
+
+            // <div>
+            //     <Myfunone />
+            //     <Myfuntwo />
+            //     <Myfunthree />
+            //     <Myfunfour />
+            //     <Myfunfive />
+            //     <Myfunsix />
+            // </div>
+
+            // <>
+            //     <Myfunone />
+            //     <Myfuntwo />
+            //     <Myfunthree />
+            //     <Myfunfour />
+            //     <Myfunfive />
+            //     <Myfunsix />
+            // </>
+
+            // <React.Fragment>
+            //     <Myfunone />
+            //     <Myfuntwo />
+            //     <Myfunthree />
+            //     <Myfunfour />
+            //     <Myfunfive />
+            //     <Myfunsix />
+            // </React.Fragment>
+
+            <React.StrictMode>
+                <Myfunone />
+                <Myfuntwo />
+                <Myfunthree />
+                <Myfunfour />
+                <Myfunfive />
+                <Myfunsix />
+            </React.StrictMode>
+
+        );
+
+    </script>
+</body>
+
+</html>
