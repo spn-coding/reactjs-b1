@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Working with Babel - Calculate</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const calone = (x, y) => x + y;
+        const caltwo = (x, y) => x - y;
+        const calthree = (x, y) => x * y;
+        const calfour = (x, y) => x / y;
+        const calfive = (x, y) => x % y;
+
+        const result = (
+            <div>
+                <p>{calone(10, 20)}</p>
+                <p>{calone(10, "20")}</p>
+                <p>{caltwo(50, "20")}</p>
+                <p>{calthree("100", 20)}</p>
+                <p>{calfour("200", 20)}</p>
+                <p>{calfive(100, 20)}</p>
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(result);
+
+    </script>
+</body>
+
+</html>
