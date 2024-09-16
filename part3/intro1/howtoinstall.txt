@@ -1,0 +1,42 @@
+=> How to install
+
+node -v 
+npm 
+nvm
+
+=>Reactjs Installtion Method 1
+
+https://react.dev/
+https://react.dev/learn/start-a-new-react-project
+
+npx create-next-app@latest
+
+Question : Ok to proceed? (y) y
+
+What is your project named? helloearth
+
+Would you like to use TypeScript? No
+
+Would you like to use ESLint? No
+
+Would you like to use Tailwind CSS? No
+
+Would you like to use `src/` directory? Yes
+
+Would you like to use App Router? (recommended) Yes
+
+Would you like to customize the default import alias (@/*)? No
+
+
+cd helloearth/
+npm run dev
+
+
+
+=>Reactjs Installtion Method 2
+
+https://vitejs.dev/
+https://vitejs.dev/guide/
+
+
+npm create vite@latest
