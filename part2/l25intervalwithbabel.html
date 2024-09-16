@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Working with Babel - Interval</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let idx = 0;
+
+        const caption = val => `Counter Number = ${val}`;
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        const setinterfun = setInterval(indexinc, 100);
+
+        function indexinc()
+        {
+            const ptag = <p>{caption(idx)}</p>
+
+            if (idx === 100)
+            {
+                clearInterval(setinterfun);
+            } else
+            {
+                idx++;
+            }
+
+            root.render(ptag);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
