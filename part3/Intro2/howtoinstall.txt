@@ -1,0 +1,60 @@
+=>How to install
+
+
+
+node -v
+nvm ls or nvm list or nvm list-remote
+nvm use v22.3.0
+nvm alias default v22.3.0
+npm
+nvm
+
+
+=> ReactJS Installation Method 1
+
+https://react.dev/
+https://react.dev/learn/start-a-new-react-project
+
+
+
+npx create-next-app@latest
+
+
+Question : Ok to proceed? (y)   y
+What is your project named? helloearth
+Would you like to use TypeScript? No / Yes : No
+Would you like to use ESLint? … No / Yes : No 
+Would you like to use Tailwind CSS? … No / Yes : No
+Would you like to use `src/` directory? … No / Yes : Yes
+Would you like to use App Router? (recommended) … No / Yes : Yes
+Would you like to customize the default import alias (@/*)? … No / Yes : No
+
+
+cd helloearth/
+npm run dev 
+
+
+
+=>ReactJS Installation Method 2
+
+https://vitejs.dev/
+https://vitejs.dev/guide/ 
+
+
+npm create vite@latest
+Question : Ok to proceed? (y)   y
+What is your project named? helloworld
+Select a framework : React
+Select a varient : Javascript
+
+
+
+  cd helloworld
+  npm install
+  npm run dev
+
+
+
+
+
+18IT

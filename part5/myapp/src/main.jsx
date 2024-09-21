@@ -17,6 +17,10 @@ import DivNine from './components/DivNine.jsx'
 import DivTen from './components/DivTen.jsx'
 import DivEleven from './components/DivEleven.jsx'
 
+import DivFourteen from './components/DivFourteen.jsx'
+
+
+
 createRoot(document.getElementById('root')).render(
   <div>
     {/* <StrictMode> */}
@@ -46,6 +50,8 @@ createRoot(document.getElementById('root')).render(
     <DivTen />
 
     <DivEleven />
+
+    <DivFourteen />
 
   </div>,
   // </StrictMode >,
